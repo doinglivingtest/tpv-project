@@ -14,6 +14,10 @@ public class Venta {
     public void addCodigo(Codigo code){
         codes.add(code);
     }
+
+    public List<Codigo> returnVentas(){
+        return codes;
+    }
 }
 
 
