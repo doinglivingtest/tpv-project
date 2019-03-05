@@ -1,12 +1,13 @@
 package upc.qa.tpv;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
 public class Venta {
-    private List<Codigo> codes;
+    private List<Codigo> codes = new ArrayList<Codigo>();
 
-    public Venta(List<Codigo> codes) {
+    public Venta() {
         this.codes = codes;
     }
 

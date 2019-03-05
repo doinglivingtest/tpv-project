@@ -16,7 +16,7 @@ public class TestTPV {
 	@Test
 	public void addVenta() {
 		assertEquals(0, tpv.getVentas().size());
-		tpv.addVenta(new Venta(null));
+		tpv.addVenta(new Venta());
 		assertEquals(1, tpv.getVentas().size());
 	}
 }
