@@ -22,7 +22,8 @@ public class TPV {
 			System.out.print("Scanning code... ");
 			while(sc.hasNextLong()) {
 				Codigo code = new Codigo(sc.nextLong());
-				venta.addCodigo(code);
+				Producto producto = new Producto(code);
+				venta.addProducto(producto);
 				System.out.println(venta);
 				System.out.print("Scanning code... ");
 			}

@@ -1,28 +1,27 @@
 package upc.qa.tpv;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 
 public class Venta {
-    private List<Codigo> codes = new ArrayList<Codigo>();
+    private List<Producto> productos = new ArrayList<Producto>();
 
-    public Venta() {
-        this.codes = codes;
+    public void addProducto(Producto prod){
+        productos.add(prod);
     }
 
-    public void addCodigo(Codigo code){
-        codes.add(code);
-    }
-    
     @Override
     public String toString() {
     	final StringBuffer sb = new StringBuffer();
-    	for(Codigo code: codes) {
-    		sb.append(code.toString()+"\n");
+    	for(Producto prod: productos) {
+    		sb.append(prod.toString()+"\n");
     	}
     	return sb.toString();
+    }
+
+    public List<Producto> returnVentas(){
+        return productos;
     }
 }
 
