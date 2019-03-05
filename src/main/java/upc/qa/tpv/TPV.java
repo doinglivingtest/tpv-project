@@ -19,21 +19,19 @@ public class TPV {
 		
 		boolean enabled = true;
 		while(enabled) {
+			System.out.print("Scanning code... ");
 			while(sc.hasNextLong()) {
 				Codigo code = new Codigo(sc.nextLong());
-				System.out.println("Adding code " + code.getCode());
 				venta.addCodigo(code);
+				System.out.println(venta);
+				System.out.print("Scanning code... ");
 			}
 			while(sc.hasNextLine()) {
 				String line = sc.nextLine();
-				if(line.equals("stop") || line.length() == 1) {
-					enabled = false;
-					break;
-				}
 				ventas.add(venta);
 				System.out.println("Print ticket");
+				enabled = false;
 				break;
-
 			}
 		}
 		

@@ -1,6 +1,7 @@
 package upc.qa.tpv;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 
@@ -13,6 +14,15 @@ public class Venta {
 
     public void addCodigo(Codigo code){
         codes.add(code);
+    }
+    
+    @Override
+    public String toString() {
+    	final StringBuffer sb = new StringBuffer();
+    	for(Codigo code: codes) {
+    		sb.append(code.toString()+"\n");
+    	}
+    	return sb.toString();
     }
 }
 
