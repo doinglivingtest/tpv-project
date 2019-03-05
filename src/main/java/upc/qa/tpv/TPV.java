@@ -21,6 +21,7 @@ public class TPV {
 		while(enabled) {
 			System.out.print("Scanning code... ");
 			while(sc.hasNextLong()) {
+				System.out.println("SUBTOTAL: " + venta.getTotal() + "€");
 				Codigo code = new Codigo(sc.nextLong());
 				Producto producto = new Producto(code);
 				venta.addProducto(producto);
@@ -30,7 +31,9 @@ public class TPV {
 			while(sc.hasNextLine()) {
 				String line = sc.nextLine();
 				ventas.add(venta);
-				System.out.println("Print ticket");
+				double total = venta.getTotal();
+				System.out.println("VENTA\n" + venta.toString() + "\nTOTAL " + total);
+				System.out.print("PAGO METALICO");
 				enabled = false;
 				break;
 			}

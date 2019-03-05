@@ -23,6 +23,14 @@ public class Venta {
     public List<Producto> returnVentas(){
         return productos;
     }
+    
+    public double getTotal() {
+    	double price = 0;
+    	for(Producto p: productos) {
+    		price += p.getPrice();
+    	}
+    	return price;
+    }
 }
 
 

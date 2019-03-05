@@ -2,6 +2,11 @@ package upc.qa.tpv;
 
 import java.util.HashMap;
 
+/** 
+ * 
+ * product tiene precio, codigo y una descripcion
+ *
+ */
 public class Producto {
 	private static HashMap<Long, String> productos = new HashMap<>();
 	
@@ -12,8 +17,6 @@ public class Producto {
 		productos.put(4l, "Patatas");
 		productos.put(5l, "Queso");
 	}
-	
-    //product tiene precio, codigo y una descripcion
 
     private String descripcion;
     private double precio;
@@ -31,5 +34,9 @@ public class Producto {
                 "descripcion='" + descripcion + '\'' +
                 ", precio=" + precio +
                 '}';
+    }
+    
+    public double getPrice() {
+    	return precio;
     }
 }
